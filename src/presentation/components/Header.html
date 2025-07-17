@@ -1,0 +1,36 @@
+<!-- Header.html (avatar dropdown) -->
+<nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+  <div class="px-3 py-3 lg:px-5 lg:pl-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center justify-start">
+        <button id="toggleSidebar" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+          <span class="sr-only">Open sidebar</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"><path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v12h12V4H4zm2 2h8v8H6V6z"></path></svg>
+        </button>
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Carpool Admin</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <!-- Avatar Dropdown -->
+        <div class="relative">
+          <button id="userMenuButton" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" type="button">
+            <span class="sr-only">Open user menu</span>
+            <img id="userAvatar" class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+          </button>
+          <!-- Dropdown -->
+          <div id="userDropdown" class="hidden absolute right-0 z-50 mt-2 w-48 bg-white rounded-md shadow-lg dark:bg-gray-700">
+            <div class="px-4 py-3">
+              <span id="dropdownUserName" class="block text-sm text-gray-900 dark:text-white font-semibold">User Name</span>
+              <span id="dropdownUserEmail" class="block text-sm text-gray-500 truncate dark:text-gray-400">user@email.com</span>
+            </div>
+            <ul class="py-1" role="menu">
+              <li><a href="/dashboard.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600" role="menuitem">Dashboard</a></li>
+              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600" role="menuitem">Settings</a></li>
+              <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600" role="menuitem">Earnings</a></li>
+              <li><button id="signOutBtn" class="w-full text-left block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:text-red-400 dark:hover:bg-gray-600" role="menuitem">Sign out</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
