@@ -4,11 +4,12 @@
   "description": "Frontend aplikasi carpool menggunakan HTMX dan Tailwind CSS",
   "main": "index.html",
   "scripts": {
-    "copy:pages": "cp src/presentation/pages/*.html public/",
+    "copy:pages": "cp src/presentation/pages/*.html public/ && cp src/presentation/js/*.js public/js/",
     "generate:config": "node scripts/generate-config.js",
     "dev": "npm run generate:config && npm run copy:pages && live-server public --port=3000",
     "build:tailwind": "tailwindcss -i ./src/css/input.css -o ./public/css/styles.css --watch",
-    "build:prod": "tailwindcss -i ./src/css/input.css -o ./public/css/styles.css --minify"
+    "build:prod": "tailwindcss -i ./src/css/input.css -o ./public/css/styles.css --minify",
+    "watch:pages": "chokidar 'src/presentation/pages/*.html' 'src/presentation/js/*.js' -c 'npm run copy:pages'"
   },
   "keywords": [
     "carpool",
@@ -19,6 +20,7 @@
   "author": "Tedo Haris Chandra",
   "license": "MIT",
   "devDependencies": {
+    "chokidar-cli": "^3.0.0",
     "live-server": "^1.2.2",
     "tailwindcss": "^3.4.0"
   },

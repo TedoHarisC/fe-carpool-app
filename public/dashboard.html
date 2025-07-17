@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Dashboard</title>
+    <title>Dashboard - Carpool App</title>
+    <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body>
-    <p>Ini Halaman Dashboard</p>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center justify-center">
+    <div class="w-full max-w-lg bg-white rounded-xl shadow-lg p-8 mt-10">
+        <h2 class="text-2xl font-bold text-blue-600 mb-4">Dashboard</h2>
+        <div class="mb-4">
+            <span class="font-semibold">Username:</span> <span id="userName" class="text-gray-700"></span>
+        </div>
+        <div class="mb-4">
+            <span class="font-semibold">Role:</span> <span id="userRole" class="text-gray-700"></span>
+        </div>
+        <button id="logoutBtn" class="mt-6 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Logout</button>
+    </div>
+    <script src="/js/config.js"></script>
+    <script type="module" src="/js/dashboard.js"></script>
 </body>
 </html>
