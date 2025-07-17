@@ -1,0 +1,28 @@
+{
+  "name": "fe-carpool",
+  "version": "1.0.0",
+  "description": "Frontend aplikasi carpool menggunakan HTMX dan Tailwind CSS",
+  "main": "index.html",
+  "scripts": {
+    "copy:pages": "cp src/presentation/pages/*.html public/",
+    "generate:config": "node scripts/generate-config.js",
+    "dev": "npm run generate:config && npm run copy:pages && live-server public --port=3000",
+    "build:tailwind": "tailwindcss -i ./src/css/input.css -o ./public/css/styles.css --watch",
+    "build:prod": "tailwindcss -i ./src/css/input.css -o ./public/css/styles.css --minify"
+  },
+  "keywords": [
+    "carpool",
+    "htmx",
+    "tailwindcss",
+    "clean-architecture"
+  ],
+  "author": "Tedo Haris Chandra",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "htmx.org": "^1.9.10"
+  }
+}
